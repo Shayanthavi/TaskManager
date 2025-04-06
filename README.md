@@ -1,6 +1,7 @@
 # Task Manager Application
 
-![Task Manager Screenshot](./screenshots/dashboard.png](https://github.com/Shayanthavi/TaskManager/blob/692ccbe9df5340d7089fe7f37f9e14ddddc100aa/screenshot.png?raw=true) 
+
+![Task Manager Screenshot](https://raw.githubusercontent.com/Shayanthavi/TaskManager/692ccbe9df5340d7089fe7f37f9e14ddddc100aa/screenshot.png)
 
 A full-stack task management system with crud application, user authentication, task prioritization, and status tracking.
 
