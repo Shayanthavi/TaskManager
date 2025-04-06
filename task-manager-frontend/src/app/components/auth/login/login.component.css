@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #3498db;
+  --primary-gradient: linear-gradient(135deg, #2c3e50, #3498db);
+  --secondary-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --success-color: #2ecc71;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--primary-gradient);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 35px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+  animation: cardAppear 0.6s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes cardAppear {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--dark-color);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 12px;
+  font-size: 28px;
+  letter-spacing: 0.8px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: var(--primary-gradient);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  animation: underlineExpand 0.5s ease-out forwards;
+}
+
+@keyframes underlineExpand {
+  0% { width: 0; }
+  100% { width: 60px; }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-control {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  padding: 14px 18px;
+  border: 2px solid #e1e5ee;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(58, 123, 213, 0.2);
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+.form-control:focus {
+  border-color: #4287f5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 135, 245, 0.15);
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.button-container {
+  margin-top: 25px;
+}
+
+.btn-primary {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  padding: 14px;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+  background: #2980b9;
+}
+
+.btn-primary:disabled {
+  background-color: #7fa9f0;
+  cursor: not-allowed;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #842029;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.spinner-border {
+  margin-right: 5px;
+}
