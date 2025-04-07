@@ -28,14 +28,14 @@ A full-stack task management system with crud application, user authentication, 
 - Angular 
 - Node.js v20.11.1
 - TypeScript
-- HTML5/CSS3
+- HTML/CSS
 
 ### Backend
 - Spring Boot
 - Spring Security
 - JWT Authentication
 - Hibernate/JPA
-- MySQL/PostgreSQL
+- MySQL
 
 ### DevOps
 - Docker
